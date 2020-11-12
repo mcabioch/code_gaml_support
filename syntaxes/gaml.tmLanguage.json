@@ -1,0 +1,83 @@
+{
+    "name": "Gaml",
+    "scopeName": "source.gaml",
+    "extensionDependencies": ["java"],
+    "patterns": [{
+            "include": "source.java"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#variables"
+        },
+        {
+            "include": "#support"
+        },
+        {
+            "name": "keyword.operator",
+            "match": "\\b(or|and)\\b"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.gaml",
+                "match": "\\b(loop|ask|do)\\b"
+            }]
+        },
+        "types": {
+            "patterns": [{
+                "name": "storage.type.gaml",
+                "match": "\\b(rgb|bool|list|data)\\b"
+            }]
+        },
+        "variables": {
+            "patterns": [{
+                "name": "variable.language.gaml",
+                "match": "\\b(self|myself|each)\\b"
+            }]
+        },
+        "support": {
+            "patterns": [{
+                    "include": "#classes"
+                },
+                {
+                    "include": "#functions"
+                }
+            ]
+        },
+        "classes": {
+            "patterns": [{
+                "name": "support.class.gaml",
+                "match": "\\b(reflex|aspect|model|global|grid|species|action|experiment|parameter|output|display|monitor|chart)\\b",
+                "patterns": [{
+                        "include": "#keywords"
+                    },
+                    {
+                        "include": "#types"
+                    },
+                    {
+                        "include": "#variables"
+                    },
+                    {
+                        "include": "#support"
+                    },
+                    {
+                        "name": "keyword.operator",
+                        "match": "\\b(or|and)\\b"
+                    }
+                ]
+            }]
+        },
+        "functions": {
+            "patterns": [{
+                "name": "support.function.gaml",
+                "match": "\\b(create|write|ask|draw|init)\\b"
+            }]
+        }
+    }
+}

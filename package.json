@@ -1,0 +1,29 @@
+{
+    "name": "gaml",
+    "displayName": "GAMA Syntax Highlighting",
+    "description": "Provides syntax highlighting support for GAMA specific file types, such as .gaml.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "gaml",
+            "aliases": [
+                "gaml"
+            ],
+            "extensions": [
+                ".gaml"
+            ],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "gaml",
+            "scopeName": "source.gaml",
+            "path": "./syntaxes/gaml.tmLanguage.json"
+        }]
+    }
+}
